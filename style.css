@@ -1,0 +1,52 @@
+#minilogo{
+	max-height: 100px;
+}
+.title-container{
+	background: lightpink;
+	display: flex;
+	justify-content: center;
+}
+li{
+	list-style: none;
+	display: inline;
+}
+a{
+	text-decoration:none;
+}
+.nav-search{
+	background:lightblue;
+	padding: 1rem;
+	float: left;
+	border-radius: 25px;
+}
+.nav-search ul li{
+	margin-right: 2rem;
+	padding: 0.5rem 1rem;
+	border: 2px solid black;
+	border-radius: 20px;
+	transition: 1s;
+}
+.nav-search ul li:hover{
+	background:black;
+	color:white;
+	transition: 1s; 
+}
+.nav-login{
+	background:lightgreen;
+	padding: 1rem;
+	float: right;
+	border-radius: 25px;
+}
+.nav-login ul li{
+	letter-spacing: 0.2rem;
+	margin-right: 2rem;
+	padding: 0.5rem 1rem;
+	border: 2px solid black;
+	border-radius: 20px;
+	transition: 1s;	
+}
+.nav-login ul li:hover{
+	background:black;
+	color:white;
+	transition: 1s; 
+}
