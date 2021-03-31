@@ -21,7 +21,6 @@ body{
 	color:white;
 	display: grid;
 	justify-content: center;
-	position: sticky;
 	top:10px;
 	padding: 50px 0px;
 	clip-path: circle(100px);
@@ -93,6 +92,57 @@ li{
 }
 
 
+/* Login & Registration Zone */
+.principal-container{
+
+}
+.login-container{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding: 1rem;
+
+} 
+.login-container form{
+	background: rgba(255,255,255,0.1);
+	color: white;
+	border-radius: 200px;
+	display: flex;
+	flex-direction: column;	
+}
+.login-container form input{
+	margin: 1rem 5rem;
+}
+.register-container{
+	display: none;
+	justify-content: center;
+	text-align: center;
+	padding: 1rem;
+
+}
+.register-container form{
+	background: rgba(255,255,255,0.1);
+	color: white;
+	border-radius: 200px;
+	display: flex;
+	flex-direction: column;	
+}
+.register-container form input{
+	margin: 1rem 10rem;
+}
+.principal-container input{
+	background: rgba(0,0,0,0.1);
+	color:white;
+	border:2px solid black;
+	border-radius: 10px;
+	outline: none;
+}
+#btn-login-send , #btn-register-send{
+	background: white;
+	color: black;
+	border: 3px solid white;
+	border-radius: 10px;
+}
 
 /* Description Zones */
 .description{
