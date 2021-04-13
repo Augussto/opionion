@@ -8,7 +8,7 @@
 }
 body{
 	font-family: robotoregular;
-	background-image: url("images/back1.jfif")
+	background-image: url("images/back1.jfif");
 }
 
 /* Header Logo & Title */
@@ -54,7 +54,7 @@ li{
 }
 .nav-search ul{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(5, 1fr);
 }
 .nav-search ul li:hover{
 	background:white;
@@ -79,7 +79,7 @@ li{
 }
 .nav-login ul{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(2, 1fr);
 }
 .nav-login ul li:hover{
 	background:white;
@@ -89,6 +89,12 @@ li{
 .wrapper{
 	display: grid;
 	grid-template-columns: 2fr 1fr;
+}
+#btn-login{
+	display:none;
+}
+#btn-register{
+	display: block;
 }
 
 
