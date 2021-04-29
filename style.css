@@ -130,34 +130,3 @@ li{
 .description h3{
 	text-align: center;
 }
-.form-error{
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	text-align: center;
-	margin: 1rem 2rem;
-	padding: 1rem 0;
-}
-.form-error label{
-	margin-bottom: 1rem;
-	grid-column: span 3;
-}
-.form-error #error{
-	grid-column: span 3;
-	margin:0 10rem;
-	height: 200px;
-	background: none;
-	border:2px solid black;
-	border-radius: 10px;
-}
-#error:focus{
-	outline:none;
-	border:2px solid white;
-}
-.form-error #btn-enviar{
-	grid-column: 2/3;
-	margin-top: 1rem;
-	background: white;
-	color: black;
-	border: 3px solid white;
-	border-radius: 10px;
-}

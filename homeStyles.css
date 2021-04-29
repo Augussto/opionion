@@ -1,0 +1,96 @@
+@font-face{
+	font-family: robotoregular;
+	src:url(./fonts/RobotoMono-Regular.ttf);
+}
+*{
+	scroll-behavior: smooth;
+	text-decoration: none;
+}
+body{
+	background: black;
+	color: white;
+	font-family: robotoregular;
+}
+#minilogo{
+	max-height: 100px;
+	min-height: 20px;
+	cursor: pointer;
+}
+.nav-container ul li{
+	list-style: none;
+	display: inline-flex;
+	justify-content:center;
+	margin: 0.5rem;
+	margin-right: 7%;
+	padding: 0.5rem;
+	font-size: calc(1em + 1vw);
+	border: 2px solid white;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.nav-container ul li:hover{
+	border: 5px solid white;
+	transition: .5s;
+}
+.nav-container ul{
+	margin-left: 15%;
+	margin-right: 10%;
+}
+.nav-container{
+	display:grid;
+	grid-template-columns: 100px 1fr 200px;
+}
+.nav-container input{
+	height: 20px;
+	margin-top: 1rem;
+	margin-left: 1rem;
+}
+
+/* Post */
+
+.post{
+	border:2px solid white;
+	border-radius: 10px;
+	font-size: calc(1em + 0.5vw);
+	padding:1rem;
+	width: 90%;
+	max-width: 1000px;
+	margin:20px auto;
+	display:grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(4, auto);
+}
+
+.post #username_icon{
+	grid-column: 1/2;
+	width: 50px;
+}
+.post #username{
+	grid-column: 2/-1;
+	border:1px solid white;
+	border-radius: 10px;
+	text-align: center;
+}
+.post #obj_image{
+	grid-column: 1/2;
+	grid-row: 2/-1;
+	max-width: 200px;
+}
+.post #obj_name{
+	grid-column: 2/-1;
+	text-align: center;
+}
+.post #points{
+	grid-column: 2/-1;
+}
+.post #opinion{
+	grid-column: 2/-1;
+}
+
+#followed{
+	display:none;
+}
+#new{
+	display: grid;
+}
