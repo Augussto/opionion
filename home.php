@@ -3,20 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="homeStyles.css">
+	<link rel="stylesheet" href="css/homeStyles.css">
 	<title>Home</title>
 </head>
 <body>
-	<div class="nav-container">
-		<img src="images/logo1.jpeg" alt="" id="minilogo">
-		<ul>
-			<li id="btn-nuevo">Nuevo</li>
-			<li id="btn-seguidos">Seguidos</li>
-			<li>Publicar</li>
-			<li>Perfil</li>
-		</ul>
-		<input type="text" placeholder="Buscador">
-	</div>
+	<?php 
+		include("header.php");
+	 ?>
 
 	<div class="new-container" id="new">
 		
@@ -62,6 +55,6 @@
 
 	</div>
 
-	<script src="scriptHome.js"></script>
+	<script src="scripts/scriptHome.js"></script>
 </body>
 </html>

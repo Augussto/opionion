@@ -1,0 +1,44 @@
+textarea{
+	resize: none;
+}
+.upload-container{
+	width: 90%;
+	margin:20px auto;
+	padding:1rem;
+	border:2px solid blue;
+}
+.upload-container form{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(6 , 50px);
+}
+#name{
+	grid-column: 1/-1;
+}
+#points{
+	grid-column: 1/-1;
+}
+#opinion{
+	grid-column: 1/-1;
+}
+#send{
+	grid-column: 2/2;
+	width: 100px;
+	margin:auto;
+}
+#image{
+	grid-column: 2/2;
+	margin:auto;
+}
+.upload-container form label{
+	grid-column: 2/2;
+	text-align: center;
+	margin:auto;
+}
+#name , #opinion{
+	background: none;
+	outline: none;
+	border: 2px solid white;
+	border-radius: 5px;
+	color:white;
+}

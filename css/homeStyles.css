@@ -27,6 +27,7 @@ body{
 	border: 2px solid white;
 	border-radius: 10px;
 	cursor: pointer;
+	transition: .5s;
 }
 .nav-container ul li:hover{
 	border: 5px solid white;

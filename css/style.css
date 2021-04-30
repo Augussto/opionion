@@ -8,7 +8,8 @@
 }
 body{
 	font-family: robotoregular;
-	background-image: url("images/back1.jfif");
+	background: rgb(40,0,30);
+	background-image: url("../images/back1.jfif");
 }
 
 /* Header Logo & Title */
