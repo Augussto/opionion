@@ -2,10 +2,10 @@
 	<div class="nav-container">
 		<img src="images/logo1.jpeg" alt="" id="minilogo">
 		<ul>
-			<li id="btn-new" onclick="location.href = 'home.php';">Nuevo</li>
-			<li id="btn-followed" onclick="location.href = 'home.php';">Seguidos</li>
-			<li id="btn-upload" >Publicar</li>
-			<li id="btn-profile" onclick="location.href = '';">Perfil</li>
+			<li ><a id="btn-new"href="home.php">Nuevo</a></li>
+			<li ><a id="btn-followed" href="homeFollowed.php">Seguidos</a></li>
+			<li ><a id="btn-upload" href="upload.php">Publicar</a></li>
+			<li ><a id="btn-profile" href="profile.php">Perfil</a></li>
 		</ul>
 		<input type="text" placeholder="Buscador">
 	</div>

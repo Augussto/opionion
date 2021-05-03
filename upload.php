@@ -25,5 +25,7 @@
 
 	</div>
 
+
+<script src="scripts/scriptHome.js"></script>
 </body>
 </html>

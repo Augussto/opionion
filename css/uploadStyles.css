@@ -5,7 +5,8 @@ textarea{
 	width: 90%;
 	margin:20px auto;
 	padding:1rem;
-	border:2px solid blue;
+	border:2px solid white;
+	border-radius: 10px;
 }
 .upload-container form{
 	display: grid;

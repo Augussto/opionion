@@ -3,38 +3,44 @@ let news = document.getElementById("new");
 let btnNew = document.getElementById("btn-new");
 let btnFollowed = document.getElementById("btn-followed");
 let btnUpload = document.getElementById("btn-upload");
+let btnProfile = document.getElementById("btn-profile");
+let url = window.location.pathname;
+
+if (url.includes("profile")){
+	btnProfile.style.color = "violet";
+	console.log(url);
+}else if (url.includes("upload")){
+	btnUpload.style.color = "violet";
+	console.log(url);
+}else if (url.includes("Followed")){
+	btnFollowed.style.color = "violet";
+	console.log(url);
+}else{
+	btnNew.style.color = "violet";
+	console.log(url);
+}
 
 btnNew.onclick = () => {
 	console.log("nuevo");
-	followed.style.display = "none";
-	news.style.display = "grid";
-	btnNew.style.background = "white";
-	btnNew.style.color = "black";
-	btnFollowed.style.background = "none";
-	btnFollowed.style.color = "white";
-	btnUpload.style.background = "none";
-	btnUpload.style.color = "white";
+	console.log(url);
+	btnNew.style.color = "violet";
+
 }
 btnFollowed.onclick = () => {
 	console.log("seguidos");
-	followed.style.display = "grid";
-	news.style.display = "none";
-	btnFollowed.style.background = "white";
-	btnFollowed.style.color = "black";
-	btnNew.style.background = "none";
-	btnNew.style.color = "white";
-	btnUpload.style.background = "none";
-	btnUpload.style.color = "white";
+	console.log(url);
+	btnFollowed.style.color = "violet";
+	
 }
 btnUpload.onclick = () => {
-	console.log("seguidos");
-	followed.style.display = "grid";
-	news.style.display = "none";
-	btnFollowed.style.background = "none";
-	btnFollowed.style.color = "white";
-	btnNew.style.background = "none";
-	btnNew.style.color = "white";
-	btnUpload.style.background = "white";
-	btnUpload.style.color = "black";
-	location.href = "upload.php";
+	console.log("upload");
+	console.log(url);
+	btnUpload.style.color = "violet";
+
+}
+btnProfile.onclick = () => {
+	console.log("profile");
+	console.log(url);
+	btnProfile.style.color = "violet";
+
 }
