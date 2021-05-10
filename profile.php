@@ -1,3 +1,11 @@
+<?php 
+session_start();
+include("connection.php");
+include("functions.php");
+
+$user_data = check_login($con);
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +19,9 @@
 	<?php 
 	include("header.php")
 	 ?>
-
+	 <a href="logout.php">Exit</a>
 	 <div class="user-container">
-	 	<h3>USERNAME</h3>
+	 	<h3>- <?php echo $user_data['username'] ?> -</h3>
 	 	<span>Followers: - </span>
 	 	<span>Followed: - </span>
 	 	<span>Opinions: - </span>

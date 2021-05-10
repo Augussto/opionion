@@ -1,15 +1,16 @@
 @font-face{
-	font-family: robotoregular;
-	src:url(./fonts/RobotoMono-Regular.ttf);
+	font-family: museomoderno;
+	src:url(../fonts/MuseoModerno.ttf);
 }
 *{
 	scroll-behavior: smooth;
 	text-decoration: none;
 }
 body{
-	font-family: robotoregular;
+	font-family: museomoderno;
 	background: rgb(40,0,30);
 	background-image: url("../images/back1.jfif");
+	color:white;
 }
 
 /* Header Logo & Title */
@@ -63,12 +64,7 @@ li{
 	color:black;
 	transition: 1s; 
 }
-#btn-login{
-	display:none;
-}
-#btn-register{
-	display: block;
-}
+
 
 
 /* Login & Registration Zone */
@@ -91,7 +87,7 @@ li{
 	margin: 1rem 5rem;
 }
 .register-container{
-	display: none;
+	display: flex;
 	justify-content: center;
 	text-align: center;
 	padding: 1rem;

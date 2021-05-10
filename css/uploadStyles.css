@@ -1,3 +1,17 @@
+@font-face{
+	font-family: museomoderno;
+	src:url(../fonts/MuseoModerno.ttf);
+}
+*{
+	scroll-behavior: smooth;
+	text-decoration: none;
+}
+body{
+	background: black;
+	color: white;
+	font-family: museomoderno;
+}
+
 textarea{
 	resize: none;
 }

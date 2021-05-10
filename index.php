@@ -1,75 +1,49 @@
+<?php 
+session_start();
+include("connection.php");
+include("functions.php");
+
+$user_data = check_login($con);
+
+ ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/style.css">
-	<title>OpiOnion</title>
+	
+	<link rel="stylesheet" href="css/homeStyles.css">
+	<title>Home</title>
 </head>
 <body>
-	<div class="title-container">
-		<img id="minilogo" src="images/logo1.jpeg" onclick="location.href = 'home.php';">
-		<span>OpiOnion</span>
-	</div>
+	<?php 
+		include("header.php");
+	 ?>
 
-		<div class="nav-search">
-			<ul>
-				<li onclick="location.href = '#zone1';">¿Como funciona OpiOnion?</li>
-				<li onclick="location.href = '#zone2';">¿Quienes Somos?</li>
-				<li id="btn-login">Iniciar</li>
-				<li id="btn-register">Registrarse</li>
-			</ul>
+	<div class="new-container" id="new">
+		
+		<div class="post">
+			<img src="images/user_icon.png" alt="icon" id="username_icon">
+			<span id="username">user_name</span>
+			<img src="images/movie_poster1.jpg" alt="obj_image" id="obj_image">
+			<h3 id="obj_name">obj_name</h3>
+			<input type="range" min="0" max="10" id="points" disabled="true">
+			<span id="opinion"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima quaerat exercitationem animi unde, consectetur beatae inventore quibusdam possimus nihil corrupti mollitia aut pariatur, et. Tempora, dolore, corrupti. Consequuntur, voluptatum, cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam sint quis, pariatur dolorum maxime, dolore suscipit consequatur error? Facilis aliquam voluptates labore ipsa deserunt quisquam corrupti, quis dolorum veritatis saepe.</span>
 		</div>
 
-	<div class="principal-container">
-		<div class="login-container" id="login-container">
-			<form action="">
-				<label for="username">Username</label>
-				<input type="text" id="username">
-				<label for="password">Contraseña</label>
-				<input type="password" id="password">
-				<input type="submit" value="Iniciar" id="btn-login-send">
-			</form>
+		<div class="post">
+			<img src="images/user_icon.png" alt="icon" id="username_icon">
+			<span id="username">user_name</span>
+			<img src="images/movie_poster1.jpg" alt="obj_image" id="obj_image">
+			<h3 id="obj_name">obj_name</h3>
+			<input type="range" min="0" max="10" id="points" disabled="true">
+			<span id="opinion"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima quaerat exercitationem animi unde, consectetur beatae inventore quibusdam possimus nihil corrupti mollitia aut pariatur, et. Tempora, dolore, corrupti. Consequuntur, voluptatum, cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam sint quis, pariatur dolorum maxime, dolore suscipit consequatur error? Facilis aliquam voluptates labore ipsa deserunt quisquam corrupti, quis dolorum veritatis saepe.</span>
 		</div>
-		<div class="register-container" id="register-container">
-			<form action="">
-				<label for="username">Username</label>
-				<input type="text" id="username">
-				<label for="email">E-mail</label>
-				<input type="text" id="email">
-				<label for="password">Contraseña</label>
-				<input type="password" id="password">
-				<label for="password-repeat">Repetir Contraseña</label>
-				<input type="password" id="password-repeat">
-				<input type="submit" value="Crear Cuenta" id="btn-register-send">
-			</form>
 
-		</div>
 	</div>
 
-	<div class="description zone1-container" id="zone1">
-		<h3>¿Como Funciona OpiOnion? <br></h3>
-		<span>
-			De hecho es muy sencillo! <br>
-			Crea tu cuenta gratuitamente, con un nombre de Usuario original <br>
-			Una vez que tengas listo tu perfil podes subir tus reseñas a OpiOnion <br>
-			asi todo el mundo puede ver que te parecio la ultima pelicula que viste! <br>
-		</span>
-	</div>
-	<div class="description zone2-container" id="zone2">
-		<h3>¿Quienes Somos?</h3>
-		<span>
-			OpiOnion esta hecho por una sola persona, si leiste bien, una sola persona! <br>
-			soy Augusto, naci en el año 2000 y actualmente resido en Mendoza, Argentina. <br>
-			Cree OpiOnion en un proyecto de mi Universidad y actualmente sigue estando en desarrollo <br>
-			Asique si encontras algun error dejamelo saber asi lo soluciono lo mas rapido posible! <br>
-			Espero que disfrutes de OpiOnion y que tus reseñas lleguen a todo el mundo!.
-		</span>
-	</div>
+	
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-	<script src="scripts/script.js"></script>
+	<script src="scripts/scriptHome.js"></script>
 </body>
 </html>
