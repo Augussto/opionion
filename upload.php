@@ -1,31 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/homeStyles.css">
-	<link rel="stylesheet" href="css/uploadStyles.css">
-	<title>Upload</title>
-</head>
-<body>
-	<?php 
-		include("header.php");
-	 ?>
+<?php 
 
-	<div class="upload-container">
-		
-		<form action="">
-			<input type="text" id="name" placeholder="Titulo..." autocomplete="off">
-			<label for="points">Puntua: </label>
-			<input type="range" min="0" max="10" id="points">
-			<textarea name="" id="opinion" cols="30" rows="10" placeholder="Tu Opinion..." autocomplete="off"></textarea>
-			<input type="file" id="image">
-			<input type="submit" id="send">
-		</form>
+// If file upload form is submitted 
+$status = $statusMsg = ''; 
+if(isset($_POST["submit"])){ 
+	
+	$title = $_POST['title'];
+	$points = $_POST['points'];
+	$opinion = $_POST['opinion'];
+	$id_user = $user_data['id'];
+    $status = 'error'; 
+    
+    if(!empty($_FILES["image"]["name"])) { 
+        // Get file info 
+        $fileName = basename($_FILES["image"]["name"]); 
+        $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
+         
+        // Allow certain file formats 
+        $allowTypes = array('jpg','png','jpeg','gif'); 
+        if(in_array($fileType, $allowTypes)){ 
+            $image = $_FILES['image']['tmp_name']; 
+            $imgContent = addslashes(file_get_contents($image)); 
+         
+            // Insert image content into database 
+            $query = "INSERT into publications (title, points, opinion, img, id_user, uploaded) VALUES ('$title','$points','$opinion','$imgContent','$id_user', NOW())"; 
+            $insert = mysqli_query($con, $query);
+             
+            if($insert){ 
+                $status = 'success'; 
+                $statusMsg = "File uploaded successfully."; 
+            }else{ 
+                $statusMsg = "File upload failed, please try again."; 
+            }  
+        }else{ 
+            $statusMsg = 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.'; 
+        } 
+    }else{ 
+        $statusMsg = 'Please select an image file to upload.'; 
+    } 
+} 
+ 
+// Display status message 
+echo $statusMsg;
 
-	</div>
-
-
-<script src="scripts/scriptHome.js"></script>
-</body>
-</html>
+ ?>

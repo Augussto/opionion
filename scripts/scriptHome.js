@@ -9,7 +9,7 @@ let url = window.location.pathname;
 if (url.includes("profile")){
 	btnProfile.style.color = "violet";
 	console.log(url);
-}else if (url.includes("upload")){
+}else if (url.includes("publish")){
 	btnUpload.style.color = "violet";
 	console.log(url);
 }else if (url.includes("Followed")){
