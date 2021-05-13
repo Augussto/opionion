@@ -7,6 +7,7 @@ $user_data = check_login($con);
 
 include("opinion_template.php");
 
+
  ?>
 <!DOCTYPE html>
 <html lang="en">

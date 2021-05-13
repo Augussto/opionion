@@ -7,6 +7,6 @@
 			<li ><a id="btn-upload" href="publish.php">Publicar</a></li>
 			<li ><a id="btn-profile" href="profile.php">Perfil</a></li>
 		</ul>
-		<input type="text" placeholder="Buscador">
+		<input type="text" id="src" placeholder="Buscador">
 	</div>
 
