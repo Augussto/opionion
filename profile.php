@@ -27,7 +27,7 @@ include("opinion_template.php");
 	 	<h3>- <?php echo $user_data['username'] ?> -</h3>
 	 	<span>Followers: - </span>
 	 	<span>Followed: - </span>
-	 	<span>Opinions: - </span>
+	 	<span>Opinions: <?php echo $user_data['cant_opinions'] ?> </span>
 	 </div>
 
 	 <?php show_profile($user_data['id']); ?>

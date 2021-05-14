@@ -25,7 +25,7 @@ textarea{
 .upload-container form{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(6 , 50px);
+	grid-template-rows: repeat(7 , 50px);
 }
 #name{
 	grid-column: 1/-1;
@@ -49,6 +49,15 @@ textarea{
 	grid-column: 2/2;
 	text-align: center;
 	margin:auto;
+}
+.upload-container form output{
+	grid-column: 2/2;
+	text-align: center;
+	margin: auto auto 20px auto;
+	color:black;
+	background: white;
+	padding: .3rem;
+	border-radius: 30px; 
 }
 #name , #opinion{
 	background: none;

@@ -26,7 +26,8 @@ include("upload.php");
 		<form action="" method="post" enctype="multipart/form-data">
 			<input type="text" name="title" id="name" placeholder="Titulo..." autocomplete="off">
 			<label for="points">Puntua: </label>
-			<input type="range" name="points" min="0" max="10" id="points">
+			<input type="range" name="points" min="0" max="10" id="points" oninput="this.nextElementSibling.value = this.value">
+			<output>5</output>
 			<textarea name="opinion" id="opinion" cols="30" rows="10" placeholder="Tu Opinion..." autocomplete="off"></textarea>
 			<input type="file" name="image" id="image">
 			<input type="submit" name="submit" id="send">

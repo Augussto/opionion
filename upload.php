@@ -8,6 +8,8 @@ if(isset($_POST["submit"])){
 	$points = $_POST['points'];
 	$opinion = $_POST['opinion'];
 	$id_user = $user_data['id'];
+    $cant_opinions = $user_data['cant_opinions'];
+
     $status = 'error'; 
     
     if(!empty($_FILES["image"]["name"])) { 
@@ -24,10 +26,13 @@ if(isset($_POST["submit"])){
             // Insert image content into database 
             $query = "INSERT into publications (title, points, opinion, img, id_user, uploaded) VALUES ('$title','$points','$opinion','$imgContent','$id_user', NOW())"; 
             $insert = mysqli_query($con, $query);
+
              
             if($insert){ 
                 $status = 'success'; 
-                $statusMsg = "File uploaded successfully."; 
+                $statusMsg = "File uploaded successfully.";
+                $query = "UPDATE user SET cant_opinions = '$cant_opinions'+ 1 WHERE id = '$id_user'";
+                mysqli_query($con, $query);
             }else{ 
                 $statusMsg = "File upload failed, please try again."; 
             }  
