@@ -7,7 +7,8 @@
 	text-decoration: none;
 }
 body{
-	background: black;
+	background: rgb(0,0,0);
+	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(72,2,87,1) 74%, rgba(77,7,96,1) 100%);
 	color: white;
 	font-family: museomoderno;
 }
@@ -17,10 +18,19 @@ a{
 a:visited{
 	color: white;
 }
-#minilogo{
+.minilogo{
 	max-height: 100px;
 	min-height: 20px;
 	cursor: pointer;
+	
+}
+.listlogo{
+	max-height: 60px;
+	min-height: 20px;
+	cursor: pointer;
+	margin-left: 2rem;
+	margin-top: 20px;
+	transition: 1s;
 }
 .nav-container ul li{
 	list-style: none;
@@ -52,13 +62,36 @@ a:visited{
 	margin-top: 1rem;
 	margin-left: 1rem;
 }
-.nav-container #src{
+.nav-container .src,
+.nav-container--mobile .src{
 	background: none;
 	color:white;
 	border:2px solid white;
 	border-radius: 10px;
 	margin-top: 2rem;
 	width: calc(2vw + 80px);
+	height: 40px;
+}
+
+.nav-container--mobile{
+	display:grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: 1fr;
+}
+.nav-container--mobile .btn-container{
+	grid-column:1/-1;
+	display:none; 
+}
+.nav-container--mobile .btn-container li{
+	list-style: none;
+	display: block;
+	text-align: center;
+	margin: 0.5rem;
+	padding: 0.5rem;
+	font-size: calc(1em + .5vw);
+	border: 2px solid white;
+	border-radius: 10px;
+	cursor: pointer;
 }
 
 /* Post */
@@ -66,6 +99,7 @@ a:visited{
 .post{
 	border:2px solid white;
 	border-radius: 10px;
+	background: rgba(255,255,255,.2);
 	font-size: calc(1em + 0.5vw);
 	padding:1rem;
 	width: 90%;
@@ -83,14 +117,13 @@ a:visited{
 }
 .post #username{
 	grid-column: 2/-1;
-	border:1px solid white;
-	border-radius: 10px;
+	border-bottom: 5px solid white;
 	text-align: center;
+	padding: .5rem;
 }
 .post #obj_image{
 	grid-column: 1/2;
 	grid-row: 2/-1;
-	
 	width: calc(10vw + 100px);
 }
 .post #obj_name{
@@ -108,7 +141,7 @@ a:visited{
 	height: 30px;
 	border:2px solid white;
 	border-radius: 10px;
-	background: black;
+	background: transparent;
 }
 .progress-bar{
 	height: 30px;

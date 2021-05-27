@@ -7,7 +7,8 @@
 	text-decoration: none;
 }
 body{
-	background: black;
+	background: rgb(0,0,0);
+	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(72,2,87,1) 74%, rgba(77,7,96,1) 100%);
 	color: white;
 	font-family: museomoderno;
 }
@@ -20,6 +21,7 @@ textarea{
 	margin:20px auto;
 	padding:1rem;
 	border:2px solid white;
+	background: rgba(255,255,255,.2);
 	border-radius: 10px;
 }
 .upload-container form{

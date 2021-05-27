@@ -38,7 +38,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 </head>
 <body>
 	<div class="title-container">
-		<img id="minilogo" src="images/logo1.jpeg" onclick="location.href = 'index.php';">
+		<img id="minilogo" src="images/logo1.png" onclick="location.href = 'index.php';">
 		<span>OpiOnion</span>
 	</div>
 
