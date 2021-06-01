@@ -23,7 +23,7 @@ include("upload.php");
 
 	<div class="upload-container">
 		
-		<form action="" method="post" enctype="multipart/form-data">
+		<form action="" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
 			<input type="text" name="title" id="name" placeholder="Titulo..." autocomplete="off">
 			<label for="points">Puntua: </label>
 			<input type="range" name="points" min="0" max="10" id="points" oninput="this.nextElementSibling.value = this.value">
@@ -37,5 +37,6 @@ include("upload.php");
 
 
 <script src="scripts/scriptHome.js"></script>
+<script src="scripts/scriptUpload.js"></script>
 </body>
 </html>
