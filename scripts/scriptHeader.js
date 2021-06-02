@@ -14,6 +14,18 @@ let btn2 = document.getElementById('m2');
 let btn3 = document.getElementById('m3');
 let btn4 = document.getElementById('m4');
 
+btn1.addEventListener("click",()=>{
+	window.location = "index.php";
+})
+btn2.addEventListener("click",()=>{
+	window.location = "homeFollowed.php";
+})
+btn3.addEventListener("click",()=>{
+	window.location = "publish.php";
+})
+btn4.addEventListener("click",()=>{
+	window.location = "profile.php";
+})
 
 if(width < 1160){
 	mobileContainer.style.display = "grid";

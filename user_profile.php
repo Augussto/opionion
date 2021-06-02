@@ -7,6 +7,7 @@ $user_data = check_login($con);
 
 include("opinion_template.php");
 
+$id = $_GET['id'];
 
  ?>
 <!DOCTYPE html>
@@ -22,16 +23,10 @@ include("opinion_template.php");
 	<?php 
 		include("header.php");
 	?>
-	 <a href="logout.php">Exit</a>
-	 <div class="user-container">
-	 	<h3>- <?php echo $user_data['username'] ?> -</h3>
-	 	<span>Seguidores: <?php echo $user_data['cant_followers'] ?> </span>
-	 	<span>Seguidos: <?php echo $user_data['cant_followed'] ?> </span>
-	 	<span>Opinions: <?php echo $user_data['cant_opinions'] ?> </span>
-	 </div>
 
-	 <?php show_profile($user_data['id']); ?>
+	 <?php show_user_profile($id); ?>
 
 	<script src="scripts/scriptHome.js"></script>
+	<script src="scripts/scriptBtnFollow.js"></script>
 </body>
 </html>
