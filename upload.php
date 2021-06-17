@@ -33,6 +33,7 @@ if(isset($_POST["submit"])){
                 $statusMsg = "File uploaded successfully.";
                 $query = "UPDATE user SET cant_opinions = '$cant_opinions'+ 1 WHERE id = '$id_user'";
                 mysqli_query($con, $query);
+                header("Location: profile.php");
             }else{ 
                 $statusMsg = "File upload failed, please try again."; 
             }  

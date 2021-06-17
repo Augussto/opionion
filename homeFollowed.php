@@ -4,7 +4,7 @@ include("connection.php");
 include("functions.php");
 
 $user_data = check_login($con);
-
+$id = $user_data['id'];
 include("opinion_template.php");
 
  ?>
@@ -24,7 +24,7 @@ include("opinion_template.php");
 	
 	<div class="followed-container" id="followed">
 		
-		<?php show_home(); ?>
+		<?php show_followed($id); ?>
 
 	</div>
 

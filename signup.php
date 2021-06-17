@@ -18,6 +18,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 		$query = "INSERT INTO user (username, email, password) values ('$username','$email','$password')";
 
 		mysqli_query($con, $query);
+		?>
+		<script> alert("Cuenta creada con Exito!") </script>
+		<?php  
 		header("Location: login.php");
 		die;
 
