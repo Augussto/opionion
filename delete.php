@@ -1,4 +1,4 @@
-<?php 
+ <?php 
 	include("connection.php");
 	$user_data = check_login($con);
 	$cant_opinions = $user_data['cant_opinions']; 
