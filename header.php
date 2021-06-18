@@ -7,12 +7,18 @@
 			<li ><a id="btn-upload" href="publish.php">Publicar</a></li>
 			<li ><a id="btn-profile" href="profile.php">Perfil</a></li>
 		</ul>
-		<input type="text" class="src" placeholder="Buscador">
+		<form action="" method="post">
+			<input type="text" class="src" name="username" placeholder="Buscador">
+			<input type="submit" name="search" hidden="true" />
+		</form>
 	</div>
 
 	<div class="nav-container--mobile" id="mobile">
 		<img src="images/logo1.png" alt="" class="minilogo">
-		<input type="text" class="src" placeholder="Buscador">
+		<form action="search.php" method="post">
+			<input type="text" class="src" name="username" placeholder="Buscador">
+			<input type="submit" name="search" hidden="true" />
+		</form>
 		<div class="icon-container" id="icon">
 			<div class="bar" id="1"></div>
 			<div class="bar" id="2"></div>

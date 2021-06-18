@@ -39,6 +39,7 @@ function show_profile($id_user){
 //used in the home, to show every opinion
 function show_home(){
 	include("connection.php");
+	include("delete_admin.php");
 	$user_data = check_login($con);
 
 	$query = "SELECT * FROM publications p INNER JOIN user u ON p.id_user = u.id ORDER BY uploaded DESC";
@@ -58,6 +59,17 @@ function show_home(){
 			  			<div class="progress-bar" style="width: <?php echo $row['points'] * 10; ?>% ;"><?php echo $row['points']; ?></div>
 					</div>
 		    		<span id="opinion"><?php echo $row['opinion']; ?></span>
+		    		<?php if($user_data['admin']){
+		    			?>
+		    			<form action="" method="post">
+		    				<label for="delete">Desea eliminar el post?</label>
+		    				<input type="checkbox" name="id_post" value="<?php echo $row['id_post']; ?>">
+		    				<label for="delete">Vuelva a Confirmarlo</label>
+		    				<input type="checkbox" name="id_user" value="<?php echo $id; ?>">
+		    				<input type="submit" value="ELIMINAR">
+		    			</form>
+		    			<?php
+		    		} ?>
 		    	</div>
 		    <?php } ?> 
 		</div> 
@@ -119,6 +131,17 @@ function show_user_profile($id_user,$id_follower){
 			  			<div class="progress-bar" style="width: <?php echo $row['points'] * 10; ?>% ;"><?php echo $row['points']; ?></div>
 					</div>
 		    		<span id="opinion"><?php echo $row['opinion']; ?></span>
+		    		<?php if($user_data['admin']){
+		    			?>
+		    			<form action="" method="post">
+		    				<label for="delete">Desea eliminar el post?</label>
+		    				<input type="checkbox" name="id_post" value="<?php echo $row['id_post']; ?>">
+		    				<label for="delete">Vuelva a Confirmarlo</label>
+		    				<input type="checkbox" name="id_user" value="<?php echo $id; ?>">
+		    				<input type="submit" value="ELIMINAR">
+		    			</form>
+		    			<?php
+		    		} ?>
 		    	</div>
 		    <?php } ?> 
 		</div> 
@@ -152,6 +175,17 @@ function show_followed($y_id){
 			  			<div class="progress-bar" style="width: <?php echo $row['points'] * 10; ?>% ;"><?php echo $row['points']; ?></div>
 					</div>
 		    		<span id="opinion"><?php echo $row['opinion']; ?></span>
+		    		<?php if($user_data['admin']){
+		    			?>
+		    			<form action="" method="post">
+		    				<label for="delete">Desea eliminar el post?</label>
+		    				<input type="checkbox" name="id_post" value="<?php echo $row['id_post']; ?>">
+		    				<label for="delete">Vuelva a Confirmarlo</label>
+		    				<input type="checkbox" name="id_user" value="<?php echo $id; ?>">
+		    				<input type="submit" value="ELIMINAR">
+		    			</form>
+		    			<?php
+		    		} ?>
 		    	</div>
 		    <?php } } ?> 
 		</div> 
